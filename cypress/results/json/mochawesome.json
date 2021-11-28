@@ -1,0 +1,125 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-11-28T01:15:31.171Z",
+    "end": "2021-11-28T01:15:31.760Z",
+    "duration": 589,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "31435495-baed-4fe8-a2ab-5d2af9d49eb0",
+      "title": "",
+      "fullFile": "cypress/integration/homepage.spec.js",
+      "file": "cypress/integration/homepage.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "45082550-1a64-433c-bb40-a6036194dcf9",
+          "title": "Homepage",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should display hello world",
+              "fullTitle": "Homepage should display hello world",
+              "timedOut": null,
+              "duration": 434,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "\"videos/homepage.spec.js.mp4\"",
+              "code": "cy.contains(\"Hello World\").should(\"be.visible\");",
+              "err": {},
+              "uuid": "b98cf800-4dbb-460b-a198-59818021b6fd",
+              "parentUUID": "45082550-1a64-433c-bb40-a6036194dcf9",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "spining logo is visible",
+              "fullTitle": "Homepage spining logo is visible",
+              "timedOut": null,
+              "duration": 135,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "\"videos/homepage.spec.js.mp4\"",
+              "code": "cy.get('header').find('img').should('have.attr', 'src').should('include', 'logo');",
+              "err": {},
+              "uuid": "b81c7cab-d14e-4fb2-b1be-b18501c5544b",
+              "parentUUID": "45082550-1a64-433c-bb40-a6036194dcf9",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "b98cf800-4dbb-460b-a198-59818021b6fd",
+            "b81c7cab-d14e-4fb2-b1be-b18501c5544b"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 569,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.0.1"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/results/json",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.0.1"
+    }
+  }
+}
