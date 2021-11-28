@@ -1,0 +1,58 @@
+name: Build
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    name: Run on Chrome 81
+    runs-on: ubuntu-18.04
+    container: cypress/browsers:node12.16.2-chrome81-ff75
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+    
+    - name: Install Node.js
+      uses: actions/setup-node@v1
+      with:
+        node-version: 13.x
+    
+    - name: Install NPM packages
+      run: npm ci
+    
+    - name: Build project
+      run: npm run build
+    
+    - name: Run tests
+      run: npm run test:dev
+
+    - name: Copy test execution videos
+      run:  cp -r cypress/videos public/videos
+
+    - name: Merge test results into one
+      run: npm run report:merge
+
+    - name: Generate HTML report
+      run: npm run report:generate
+
+    - name: Deploy report page
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./public
+        user_name: 'github-actions[bot]'
+        user_email: 'github-actions[bot]@users.noreply.github.com'
+
+    - name: Upload production-ready build files
+      uses: actions/upload-artifact@v2
+      with:
+        name: production-files
+        path: ./build
+  
+  
