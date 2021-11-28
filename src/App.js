@@ -8,6 +8,7 @@ function App() {
         <img src={logo} className="App-logo" alt="logo" />
        <p>Hello World</p>
        <p>IK here</p>
+       <button type="button">Click me</button>
         <p>
           Edit <code>src/App.js</code> and save to reload. 
         </p>

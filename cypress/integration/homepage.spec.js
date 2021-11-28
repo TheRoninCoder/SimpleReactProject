@@ -17,6 +17,11 @@ describe("Homepage", () => {
     it("should display IK", () => {
         cy.contains("IK here").should("be.visible")
     })
+
+    it("should display click me button", () => {
+        cy.contains("button", "Click me").click()
+    })
+
     /*
     it("should display habit card when new habit is added", () => {
         cy.contains("button", "Add").click()
