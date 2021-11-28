@@ -21,7 +21,7 @@
     "build": "react-scripts build",
     "eject": "react-scripts eject",
     "test": "cypress run",
-    "test:dev": "cypress run --config baseUrl=/SimpleReactProject/"
+    "test:dev": "cypress run --config baseUrl=https://theronincoder.github.io/SimpleReactProject/"
   },
   "eslintConfig": {
     "extends": [
