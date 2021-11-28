@@ -2,7 +2,7 @@
   "name": "simplereactproject",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://theronincoder.github.io/SimpleReactProject/",
+  "homepage": "/SimpleReactProject/",
   "dependencies": {
     "@testing-library/jest-dom": "^5.15.1",
     "@testing-library/react": "^11.2.7",
@@ -21,7 +21,7 @@
     "build": "react-scripts build",
     "eject": "react-scripts eject",
     "test": "cypress run",
-    "test:dev": "cypress run --browser chrome --config baseUrl=https://theronincoder.github.io/SimpleReactProject/",
+    "test:dev": "cypress run --browser chrome",
     "report:merge": "mochawesome-merge cypress/results/json/*.json > index.json",
     "report:generate": "marge index.json --reportDir public --assetsDir public/assets --reportPageTitle index.html"
   },
