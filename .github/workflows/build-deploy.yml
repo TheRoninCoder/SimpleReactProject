@@ -12,7 +12,6 @@ jobs:
   build:
     name: Run on Chrome 81
     runs-on: ubuntu-18.04
-    
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
