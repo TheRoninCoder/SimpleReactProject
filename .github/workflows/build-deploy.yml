@@ -12,7 +12,6 @@ jobs:
   build:
     name: Run on Chrome 81
     runs-on: ubuntu-18.04
-    container: cypress/browsers:node12.16.2-chrome81-ff75
     
     steps:
       - name: Checkout code
@@ -25,13 +24,13 @@ jobs:
           wait-on: "http://localhost:3000/SimpleReactProject"
           browser: chrome
           headless: true
-          
+
       - name: Copy test execution videos
         run:  cp -r cypress/videos public/videos
 
       - name: Merge test results into one
         run: npm run report:merge
-
+`
       - name: Generate HTML report
         run: npm run report:generate
 
