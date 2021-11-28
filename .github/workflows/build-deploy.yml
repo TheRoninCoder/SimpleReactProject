@@ -25,10 +25,7 @@ jobs:
           wait-on: "http://localhost:3000/SimpleReactProject"
           browser: chrome
           headless: true
-
-      - name: Run tests
-        run: npm run test
-
+          
       - name: Copy test execution videos
         run:  cp -r cypress/videos public/videos
 
