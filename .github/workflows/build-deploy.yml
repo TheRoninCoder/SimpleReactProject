@@ -25,13 +25,13 @@ jobs:
           wait-on: "http://localhost:3000/SimpleReactProject"
           browser: chrome
           headless: true
-
+          
       - name: Copy test execution videos
         run:  cp -r cypress/videos public/videos
 
       - name: Merge test results into one
         run: npm run report:merge
-`
+
       - name: Generate HTML report
         run: npm run report:generate
 
