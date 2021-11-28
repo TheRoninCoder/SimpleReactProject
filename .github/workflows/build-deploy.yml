@@ -10,9 +10,9 @@ on:
 
 jobs:
   build:
-    name: Run on Chrome 81
+    name: Run on Chrome latest
     runs-on: ubuntu-18.04
-    container: cypress/browsers:node12.16.2-chrome81-ff75
+    container: cypress/browsers:latest
     
     steps:
       - name: Checkout code
