@@ -25,17 +25,6 @@ jobs:
           wait-on: "http://localhost:3000/SimpleReactProject"
           browser: chrome
           headless: true
-    
-      - name: Install Node.js
-        uses: actions/setup-node@v1
-        with:
-          node-version: 13.x
-      
-      - name: Install NPM packages
-        run: npm ci
-      
-      - name: Build project
-        run: npm run build
 
       - name: Run tests
         run: npm run test
