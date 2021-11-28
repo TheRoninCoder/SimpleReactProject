@@ -13,6 +13,10 @@ describe("Homepage", () => {
     it("spining logo is visible", () =>{
         cy.get('header').find('img').should('have.attr', 'src').should('include','logo')
     })
+
+    it("should display IK", () => {
+        cy.contains("IK here").should("be.visible")
+    })
     /*
     it("should display habit card when new habit is added", () => {
         cy.contains("button", "Add").click()
