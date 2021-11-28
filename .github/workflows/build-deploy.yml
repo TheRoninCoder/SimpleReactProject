@@ -12,7 +12,7 @@ jobs:
   build:
     name: Run on Chrome 94
     runs-on: ubuntu-18.04
-    container: cypress/browsers:node16.5.0-chrome94-ff93
+    container: cypress/browsers:node16.5.0-chrome94-ff93 
     
     steps:
       - name: Checkout code
