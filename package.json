@@ -22,7 +22,8 @@
     "eject": "react-scripts eject",
     "test": "cypress run",
     "test:dev": "cypress run --browser chrome --config baseUrl=https://theronincoder.github.io/SimpleReactProject/",
-    "report:merge": "mochawesome-merge cypress/results/json/*.json > index.json"
+    "report:merge": "mochawesome-merge cypress/results/json/*.json > index.json",
+    "report:generate": "marge index.json --reportDir public --assetsDir public/assets --reportPageTitle index.html"
   },
   "eslintConfig": {
     "extends": [
